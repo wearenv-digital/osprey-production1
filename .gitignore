@@ -3,6 +3,7 @@
 .env*
 ./db
 ./db/*
+db
 
 src/sql/mysql*
 src/sql/mysql
