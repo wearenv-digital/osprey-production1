@@ -1,9 +1,9 @@
 # Defined Ignore
 .env
 .env*
-./db
+./db/
 ./db/*
-db
+db/
 
 src/sql/mysql*
 src/sql/mysql
