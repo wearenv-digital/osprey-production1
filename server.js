@@ -14,6 +14,7 @@ app.use(bodyParser.json());
 app.use('/public', express.static('./src/public'));
 
 app.use(require('./src/routes/routes'));
+app.use(require('./src/routes/allOtherRoutes'))
 
 app.listen(PORT, (req, res) => {
 	console.log(`server running on port ${PORT}`);

@@ -1,10 +1,10 @@
 const Middleware = function () {
 	return function (req, res, next) {
 		let path = req.originalUrl;
-		console.log('path "req.originalUrl" ' + path);
+		// console.log('path "req.originalUrl" ' + path);
 
 		let breadCrumbs = path.split('/');
-		console.log('breadCrumbs : ' + breadCrumbs);
+		// console.log('breadCrumbs : ' + breadCrumbs);
 
 		let index = breadCrumbs.indexOf('');
 		while (index !== -1) {
@@ -17,7 +17,7 @@ const Middleware = function () {
 
 		// let urlPath;
 		let urlPath = req.headers.host;
-		console.log('urlPath is ' + urlPath);
+		// console.log('urlPath is ' + urlPath);
 
 		for (let i = 0; i <= breadCrumbs.length - 1; i++) {
 			req.breadcrumbs.push({
@@ -29,7 +29,7 @@ const Middleware = function () {
 				urlPath += '/' + breadCrumbs[i + 1];
 			}
 		}
-		console.log('url path is ' + urlPath);
+		// console.log('url path is ' + urlPath);
 		next();
 	};
 };
