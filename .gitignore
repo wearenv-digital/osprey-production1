@@ -1,6 +1,7 @@
 # Defined Ignore
 .env
 .env*
+
 ./db/
 ./db/*
 db/
